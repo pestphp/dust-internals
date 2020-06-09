@@ -1,6 +1,6 @@
 <?php
 
-namespace Dest;
+namespace Dust;
 
 use Laravel\Dusk\Browser;
 use Laravel\Dusk\Page;

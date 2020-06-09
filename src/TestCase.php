@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dest;
+namespace Dust;
 
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;

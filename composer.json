@@ -1,6 +1,6 @@
 {
-    "name": "pestphp/dest-internals",
-    "description": "Dest internals",
+    "name": "pestphp/dust-internals",
+    "description": "Dust internals",
     "license": "MIT",
     "require": {
         "php": "^7.3",
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dest\\": "src/"
+            "Dust\\": "src/"
         },
         "files": [
             "src/Autoload.php"

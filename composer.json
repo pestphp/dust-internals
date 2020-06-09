@@ -1,24 +1,20 @@
 {
-    "name": "pestphp/pest-plugin-template",
-    "description": "My awesome plugin",
-    "keywords": [
-        "php",
-        "framework",
-        "pest",
-        "unit",
-        "test",
-        "testing",
-        "plugin"
-    ],
+    "name": "pestphp/dest-internals",
+    "description": "Dest internals",
     "license": "MIT",
     "require": {
         "php": "^7.3",
+        "laravel/dusk": "^6.2",
+        "laravel/framework": "^7.0",
         "pestphp/pest": "^0.2"
     },
     "autoload": {
         "psr-4": {
-            "Pest\\PluginName\\": "src/"
-        }
+            "Dest\\": "src/"
+        },
+        "files": [
+            "src/Autoload.php"
+        ]
     },
     "require-dev": {
         "pestphp/pest-dev-tools": "dev-master"

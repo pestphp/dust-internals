@@ -41,6 +41,7 @@ final class Plugin implements HandlesArguments
         $app = (new TestCase())->createApplication();
 
         $app->register(\Illuminate\Filesystem\FilesystemServiceProvider::class);
+        $app->register(\Laravel\Dusk\DuskServiceProvider::class);
 
         $kernel = $app->make(\Illuminate\Contracts\Console\Kernel::class);
 

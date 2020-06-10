@@ -29,6 +29,11 @@
     "extra": {
         "branch-alias": {
             "dev-master": "0.2.x-dev"
+        },
+        "pest": {
+            "plugins": [
+                "Dust\\Plugin"
+            ]
         }
     },
     "scripts": {

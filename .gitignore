@@ -1,6 +1,14 @@
 .idea/*
 .idea/codeStyleSettings.xml
 composer.lock
+screenshots/*
+!screenshots/.gitkeep
+console/*
+!console/.gitkeep
+source/*
+!source/.gitkeep
+bootstrap/cache/*.php
+!bootstrap/cache/.gitkeep
 /vendor/
 coverage.xml
 .phpunit.result.cache

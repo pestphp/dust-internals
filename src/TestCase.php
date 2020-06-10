@@ -34,13 +34,12 @@ class TestCase extends DuskTestCase
         $directory = function (string $target): string {
             return implode(DIRECTORY_SEPARATOR, [
                 TestSuite::getInstance()->rootPath,
-                'tests',
                 $target,
             ]);
         };
 
         Browser::$storeScreenshotsAt = $directory('screenshots');
-        Browser::$storeConsoleLogAt  = $directory('logs');
+        Browser::$storeConsoleLogAt  = $directory('console');
         Browser::$storeSourceAt      = $directory('source');
     }
 
@@ -49,7 +48,7 @@ class TestCase extends DuskTestCase
      */
     public function createApplication(): Application
     {
-        $app = new Application(dirname(__DIR__));
+        $app = new Application(dirname(__FILE__, 2));
 
         $app->singleton(
             HttpKernelContract::class,

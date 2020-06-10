@@ -6,7 +6,8 @@
         "php": "^7.3",
         "laravel/dusk": "^6.2",
         "laravel/framework": "^7.0",
-        "pestphp/pest": "^0.2"
+        "pestphp/pest": "^0.2",
+        "pestphp/pest-plugin": "^0.2"
     },
     "autoload": {
         "psr-4": {

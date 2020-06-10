@@ -31,12 +31,15 @@ final class Plugin implements HandlesArguments
             return $arguments;
         }
 
-        $this->init();
+        $this->init($arguments);
 
         exit(0);
     }
 
-    private function init(): void
+    /**
+     * @param array<int, string> $arguments
+     */
+    private function init(array $arguments): void
     {
         $app = (new TestCase())->createApplication();
 
@@ -45,7 +48,17 @@ final class Plugin implements HandlesArguments
 
         $kernel = $app->make(\Illuminate\Contracts\Console\Kernel::class);
 
-        $status = $kernel->call('dusk:chrome-driver', [], $this->output);
+        // @todo To be improved..
+        unset($arguments[0]);
+        unset($arguments[1]);
+        $arguments = array_values($arguments);
+        if (array_key_exists(0, $arguments)) {
+            $version = $arguments[0];
+            unset($arguments[0]);
+            $arguments['version'] = $version;
+        }
+
+        $status = $kernel->call('dusk:chrome-driver', $arguments, $this->output);
 
         $kernel->terminate(new \Symfony\Component\Console\Input\ArrayInput([]), $status);
 

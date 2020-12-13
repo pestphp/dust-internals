@@ -1,13 +1,13 @@
 {
     "name": "pestphp/dust-internals",
-    "description": "Dust internals",
+    "description": "A PHP browser testing solution to dust your projects, using Laravel Dusk and Pest.",
     "license": "MIT",
     "require": {
         "php": "^7.3",
-        "laravel/dusk": "^6.2",
+        "laravel/dusk": "^6.0",
         "laravel/framework": "^7.0",
-        "pestphp/pest": "^0.2",
-        "pestphp/pest-plugin": "^0.2"
+        "pestphp/pest": "^0.3",
+        "pestphp/pest-plugin": "^0.3"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +28,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2.x-dev"
+            "dev-master": "0.3.x-dev"
         },
         "pest": {
             "plugins": [
@@ -37,8 +37,8 @@
         }
     },
     "scripts": {
-        "lint": "rector process src && php-cs-fixer fix -v",
-        "test:lint": "php-cs-fixer fix -v --dry-run && rector process src --dry-run",
+        "lint": " php-cs-fixer fix -v",
+        "test:lint": "php-cs-fixer fix -v --dry-run",
         "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [

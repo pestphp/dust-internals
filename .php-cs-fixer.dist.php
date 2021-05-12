@@ -22,6 +22,9 @@ $rules = [
 
 $rules['increment_style'] = ['style' => 'post'];
 
+// Workaround for `$this` declaration
+$rules['phpdoc_to_comment'] = false;
+
 return (new PhpCsFixer\Config())
     ->setUsingCache(true)
     ->setRules($rules)
